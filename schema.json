@@ -1,0 +1,88 @@
+[
+    {
+      "name": "event_date",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "event_timestamp",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "event_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "event_params",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "fields": [
+        {
+          "name": "key",
+          "type": "STRING",
+          "mode": "NULLABLE"
+        },
+        {
+          "name": "value",
+          "type": "RECORD",
+          "mode": "NULLABLE",
+          "fields": [
+            {
+              "name": "int_value",
+              "type": "STRING",
+              "mode": "NULLABLE"
+            },
+            {
+              "name": "string_value",
+              "type": "STRING",
+              "mode": "NULLABLE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "geo",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "fields": [
+        {
+          "name": "city",
+          "type": "STRING",
+          "mode": "NULLABLE"
+        },
+        {
+          "name": "country",
+          "type": "STRING",
+          "mode": "NULLABLE"
+        },
+        {
+          "name": "continent",
+          "type": "STRING",
+          "mode": "NULLABLE"
+        },
+        {
+          "name": "region",
+          "type": "STRING",
+          "mode": "NULLABLE"
+        },
+        {
+          "name": "sub_continent",
+          "type": "STRING",
+          "mode": "NULLABLE"
+        },
+        {
+          "name": "metro",
+          "type": "STRING",
+          "mode": "NULLABLE"
+        }
+      ]
+    }
+  ]
