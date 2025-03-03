@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>nexar&lowbar;test</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="nexar_test">nexar_test</h1>
+<h2 id="câu-1-phân-biệt-giữa-kimball-one-big-table-và-relational-modeling-đối-với-vai-trò-là">Câu 1: Phân biệt giữa Kimball, One Big Table và Relational Modeling. Đối với vai trò là</h2>
+<p>Data Engineer, bạn sẽ lựa chọn phương pháp nào trong từng trường hợp cụ thể.</p>
+<p><strong>Kimball</strong>: phương pháp thiết kế data warehouse theo mô hình dimensional model với star schema hoặc snowflake schema</p>
+<p>Cấu trúc: bao gồm các bảng fact và dim</p>
+<p>=&gt; Chi tiết, dễ hiểu tối ưu cho truy vấn phân tích, phù hợp với báo cáo và BI. Dùng cho việc xây dựng data warehouse và tạo báo cáo BI</p>
+<p><strong>One Big Table</strong>: phương pháp đưa tất cả dữ liệu vào một bảng duy nhất thường sử dụng cho các bài toán machine learning</p>
+<p>Cấu trúc: 1 bảng lớn, phi chuẩn, nhiều cột</p>
+<p>=&gt; Đơn giản, hiệu quả cho việc huấn luyện mô hình nhưng khó bảo trì và có thể gây dư thừa. Thường cho việc chuẩn bị dữ liệu huấn luyện mô hình học máy, học sâu.</p>
+<p><strong>Relational modeling</strong>: mô hình thiết kế dữ liệu truyền thống tuân theo các nguyên tắc của RDBMS và chuẩn hóa</p>
+<p>Cấu trúc: nhiều bảng liên kết với nhau thông qua khóa và tối ưu thành các chuẩn 3NF...</p>
+<p>=&gt; Giảm thiểu dữ thừa, tăng tính toàn vẹn phù hợp với OLTP. Nhưng truy vấn phức tạp, cần join nhiều. Hợp khi xây dựng hệ thống OLTP tối ưu, thiết kế db cho hệ thống dịch vụ</p>
+<h2 id="câu-2-trong-bigquery-tại-sao-chỉ-partition-được-column-dạng-integer-time-unit-ingestion-time">Câu 2: Trong Bigquery, tại sao chỉ partition được column dạng INTEGER, time-unit, ingestion time?</h2>
+<ul>
+<li>
+<p>Hiệu năng I/O và xử lý phân tán: Khi BigQuery xử lý hàng nghìn node song song, các partition dựa trên giá trị số hoặc thời gian cho phép phân chia khối lượng công việc hiệu quả hơn. Hệ thống biết chính xác ranh giới của mỗi partition và có thể prune data không cần thiết.</p>
+</li>
+<li>
+<p>Hiệu quả lưu trữ Colossus: BigQuery sử dụng hệ thống lưu trữ Colossus, và cách tổ chức dữ liệu theo partitioning kiểu này tối ưu cho việc tìm kiếm và thu thập dữ liệu từ storage layer.</p>
+</li>
+<li>
+<p>Nguyên tắc cardinality: Với kinh nghiệm xây dựng data warehouse, chúng ta biết rằng cột partition lý tưởng nên có cardinality vừa phải - không quá cao (như UUID), không quá thấp (như Boolean). INTEGER và DATE/TIMESTAMP có đặc tính này.</p>
+</li>
+<li>
+<p>Cost management: Qua thực tế làm việc, partitioning theo thời gian cho phép kiểm soát chi phí hiệu quả nhất. Ví dụ, tôi thường setup expiration policy trên các partition theo date để tự động xóa dữ liệu cũ sau 90 ngày, tiết kiệm chi phí lưu trữ đáng kể.</p>
+</li>
+<li>
+<p>Trải nghiệm query thực tế: Khi filter theo partition key trong query, BigQuery chỉ scan đúng những partition cần thiết. Trong dự án thực tế, tôi từng giảm được 95% scan data và tiết kiệm rất nhiều chi phí khi cấu trúc partition hợp lý.</p>
+</li>
+</ul>
+<p>Từ kinh nghiệm thực tế, STRING hoặc các kiểu dữ liệu khác thường gây ra skewed partitions - một số partition quá lớn, số khác quá nhỏ - làm giảm hiệu quả phân tán xử lý và khiến các truy vấn chậm hơn.</p>
+<h2 id="câu-3-trong-bigquery-mô-tả-nguyên-lý-hoạt-động-ở-cấp-độ-engine-của-clustered-table-trong-trường-hợp-sử-dụng-column-dạng-string">Câu 3: Trong Bigquery, mô tả nguyên lý hoạt động (ở cấp độ engine) của clustered table, trong trường hợp sử dụng column dạng STRING.</h2>
+<p>Từ kinh nghiệm thực tế triển khai, khi BigQuery xử lý clustered tables với column STRING, engine hoạt động như sau:
+Storage &amp; Xử lý dữ liệu
+Khi load data vào bảng có STRING clustering:</p>
+<p>BigQuery sắp xếp data theo lexicographical order (thứ tự từ điển Unicode) của các STRING values. Khác với TIMESTAMP/INTEGER, việc sắp xếp này phức tạp hơn và chiếm nhiều compute resources.
+Data được chia thành các blocks, mỗi block chứa những rows có STRING values gần nhau. Trong thực tế, tôi thấy mỗi block thường chứa khoảng 1-5GB dữ liệu (tùy thuộc vào cấu hình system).
+Mỗi block được gán metadata với min/max STRING values. Đây là key point giúp query optimization - engine sẽ biết nhanh chóng block nào chứa giá trị STRING cần tìm mà không phải scan toàn bộ.</p>
+<p>Khi query hoạt động
+Giả sử table events có clustering theo user_id (STRING):
+sqlCopySELECT * FROM events WHERE user_id = 'user_12345'
+Query sẽ hoạt động:</p>
+<p>Block elimination: Engine kiểm tra metadata của từng block và loại bỏ ngay những blocks không chứa user_id = 'user_12345'.
+I/O reduction: Thay vì scan toàn bộ 100GB data, có thể engine chỉ cần đọc 1-2 blocks (~2-10GB) chứa giá trị tìm kiếm.
+Intelligent scanning: Engine không cần decode/deserialize tất cả columns trong block, mà chỉ focus vào columns được select.</p>
+<p>Những cạm bẫy thực tế
+Từ kinh nghiệm làm việc với STRING clustering:</p>
+<p>Data skew: Nếu phân bố STRING values không đều (ví dụ: 90% records có cùng một giá trị), hiệu quả giảm đáng kể. Tôi từng thấy case query chậm hơn khi cluster trên một STRING field có 80% là NULL.
+Cardinality too high: Với STRING fields như UUID có quá nhiều unique values, clustering hiệu quả không cao vì mỗi block chỉ chứa được rất ít records.
+Incremental loads: Khi load data theo batch nhỏ, data được thêm vào một lúc sẽ nằm ở cùng block, làm giảm hiệu quả clustering theo thời gian. Tôi thường phải chạy định kỳ CREATE OR REPLACE TABLE để rebuild table.
+Filter patterns: Clustering hoạt động tốt nhất với equality filters (=) và range filters trên STRING. Pattern matching (LIKE '%xyz%') không tận dụng được clustering.</p>
+<p>Network &amp; Compute
+Trong kiến trúc BigQuery, clustered tables giúp giảm shuffling data giữa các compute nodes, vì dữ liệu đã được pre-sorted. Điều này giảm đáng kể network traffic và compute resources khi xử lý big tables.
+Từ thực tế làm việc, clustered tables với STRING có thể giảm 50-80% query cost và thời gian xử lý, nhưng cần được thiết kế cẩn thận dựa trên access patterns và phân bố dữ liệu.</p>
+<h2 id="câu-4-trong-bigquery-so-sánh-hàm-approx_count_distinct-và-count-distinct">Câu 4: Trong Bigquery, so sánh hàm APPROX_COUNT_DISTINCT và COUNT DISTINCT.</h2>
+<p><strong>COUNT DISTINCT:</strong> Tính chính xác số lượng giá trị duy nhất, yêu cầu BigQuery phải lưu trữ và theo dõi mọi giá trị duy nhất trong bộ nhớ.</p>
+<p>**APPROX_COUNT_DISTINCT:**Sử dụng thuật toán HyperLogLog++ để ước tính số lượng giá trị duy nhất. Thay vì lưu trữ toàn bộ giá trị, nó chỉ lưu trữ &quot;sketches&quot; của dữ liệu.</p>
+<p><strong>Hiệu năng và tài nguyên</strong></p>
+<p><strong>COUNT DISTINCT:</strong></p>
+<ul>
+<li>Tốn nhiều bộ nhớ vì phải theo dõi mọi giá trị duy nhất</li>
+<li>Yêu cầu shuffle data nhiều hơn giữa các nodes</li>
+<li>Tốc độ chậm hơn với large datasets</li>
+<li>Chi phí xử lý cao hơn do scan và xử lý toàn bộ dữ liệu</li>
+</ul>
+<p><strong>APPROX_COUNT_DISTINCT:</strong></p>
+<ul>
+<li>Sử dụng bộ nhớ cố định, không phụ thuộc vào lượng dữ liệu</li>
+<li>Giảm đáng kể lượng data phải shuffle</li>
+<li>Tốc độ nhanh hơn đáng kể (có thể nhanh hơn 10-100x)</li>
+<li>Chi phí xử lý thấp hơn</li>
+</ul>
+<p><strong>Độ chính xác:</strong></p>
+<ul>
+<li>COUNT DISTINCT: Kết quả chính xác 100%</li>
+<li>APPROX_COUNT_DISTINCT: Độ lỗi tiêu chuẩn khoảng 1%, nghĩa là kết quả thường nằm trong khoảng ±2% của giá trị thực</li>
+</ul>
+<p><strong>Trường hợp sử dụng phù hợp</strong></p>
+<p>COUNT DISTINCT phù hợp khi:</p>
+<ul>
+<li>Cần độ chính xác tuyệt đối</li>
+<li>Làm việc với dataset nhỏ</li>
+<li>Sử dụng trong báo cáo tài chính hoặc các trường hợp đòi hỏi tính chính xác cao</li>
+</ul>
+<p>APPROX_COUNT_DISTINCT phù hợp khi:</p>
+<ul>
+<li>Chấp nhận sai số nhỏ để đổi lấy hiệu suất</li>
+<li>Làm việc với dataset lớn</li>
+<li>Sử dụng trong analytics, dashboards, monitoring</li>
+<li>Trong các trường hợp cần optimize chi phí</li>
+</ul>
+<h2 id="câu-5-ứng-viên-được-cung-cấp-một-loạt-các-file-dữ-liệu-ở-dạng-json-nd-đã-được-nén-lại-ở">Câu 5: Ứng viên được cung cấp một loạt các file dữ liệu ở dạng JSON-ND đã được nén lại ở</h2>
+<p>chuẩn GZIP MockData Dữ liệu chứa các event thu thập được từ 1 game mobile. Ứng viên thực hiện các yêu cầu sau:</p>
+<p>a. Import dữ liệu vào BigQuery với schema hợp lý.</p>
+<p>b. Viết lệnh truy vấn cho các câu hỏi sau: -</p>
+<p>Tỷ lệ chiến thắng (win) ở các level 1,5,10 của toàn bộ user?</p>
+<p>Chú ý:</p>
+<ul>
+<li>
+<p>Tỷ lệ sử dụng skill trung bình trong 1 ván chơi của những user ở Brazil?</p>
+</li>
+<li>
+<p>Tỷ lệ user còn ở lại chơi game qua từng level? (note: giả sử rằng số lượng user chơi</p>
+</li>
+<li>
+<p>các level sau sẽ ít hơn level trước, vì vậy câu hỏi yêu cầu kết quả chính xác rằng sau</p>
+</li>
+<li>
+<p>mỗi level, số user còn lại là bao nhiêu).</p>
+</li>
+<li>
+<p>Ứng viên được tuỳ ý thiết kế thêm các bảng, view, ... phụ trợ khác.</p>
+</li>
+<li>
+<p>Ứng viên cung cấp lại toàn bộ schema của các table.</p>
+</li>
+<li>
+<p>Ứng viên cung cấp lại các script SQL, các script phụ trợ khác.</p>
+</li>
+<li>
+<p>Ngoài SQL để truy vấn bên trong BigQuery, đối với các chức năng phụ trợ khác, ứng
+viên được tuỳ ý chọn stack và ngôn ngữ.</p>
+</li>
+<li>
+<p>Nếu giải thích được lý do lựa chọn stack, ngôn ngữ và những quyết định xung quanh
+giải pháp thì sẽ được đánh giá cao hơn.</p>
+</li>
+</ul>
+<p>Giải nghĩa các thông tin:</p>
+<ul>
+<li>event_date: ngày event được log.</li>
+<li>event_timestamp: thời điểm cụ thể của event được log.</li>
+<li>event_name: tên của event.</li>
+<li>event_params: các cặp key-value biểu thị dữ liệu của event.</li>
+<li>geo: chứa thông tin về địa lý.</li>
+</ul>
+<p>Các event tiêu biểu:</p>
+<ul>
+<li>level_start: được log lúc user bắt đầu chơi 1 level, với các params sau:</li>
+</ul>
+<ul>
+<li>level: level của ván chơi.</li>
+</ul>
+<ul>
+<li>level_finish: được log lúc user kết lúc 1 level, với các params sau:</li>
+</ul>
+<ul>
+<li>
+<p>level: level hiện tại.</p>
+</li>
+<li>
+<p>duration: thời gian đã chơi, tính bằng giây.</p>
+</li>
+<li>
+<p>result: kết quả ván chơi.</p>
+</li>
+</ul>
+<ul>
+<li>use_skill: được log lúc user sử dụng 1 skill, với các params sau:</li>
+</ul>
+<ul>
+<li>
+<p>level: level hiện tại.</p>
+</li>
+<li>
+<p>name: tên của skill.</p>
+</li>
+</ul>
+<h3 id="import-data-vào-bigquery">Import data vào Bigquery</h3>
+
+            
+            
+        </body>
+        </html>
